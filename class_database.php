@@ -1,10 +1,10 @@
 <?php
     
     class Database {
-        private $hostname = "HOSTNAME";
-        private $databaseUser = "DATABASE_USERNAME";
-        private $databaseUserPassword = "DATABASE_USER_PASSWORD";
-        private $databaseName = "DATABASE_NAME";
+        private $hostname = "localhost";
+        private $databaseUser = "customCMSUser";
+        private $databaseUserPassword = "Ae3Vr3mcUvK3wTva";
+        private $databaseName = "customCMS";
 
         private $dbh;
         private $error;
@@ -46,7 +46,7 @@
                         $type = PDO::PARAM_NULL;
                         break;
                     default:
-                        $type = PDO::PARAM_STRING;
+                        $type = PDO::PARAM_STR;
                 }//end switch
             }//end if
             $this->stmt->bindValue($param, $value, $type);
